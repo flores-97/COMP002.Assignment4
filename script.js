@@ -46,9 +46,33 @@ console.log(sum(range(1, 10)));
 
 function reverseArray(alphaList) {//attempted to approach question 3.1 with same mentality as previous questions. 
     let alphaReverse = [];
-    for (let i = alphaList.length -1; i >= 0; i--) {//first attempt 'let i = 0; i < alphalist.length; i++' but then realized I had to reverse. Referred to over stack overflow.
+    for (let i = alphaList.length -1; i >= 0; i--) {//first attempt 'let i = 0; i < alphalist.length; i++' but then realized I had to reverse. Referred to stack overflow.
         alphaReverse.push(alphaList[i]);//alphalist takes my input, alphaReverse.push completes the function
     }
     return alphaReverse;//creates the output.
 }
 console.log(reverseArray(["A", "B", "C"]));
+
+
+
+
+/* Source - https://stackoverflow.com/a
+Posted by CoolLife, modified by community. See post 'Timeline' for change history
+ Retrieved 2025-11-08, License - CC BY-SA 3.0*/
+
+function reverseArrayInPlace(array){ 
+  for (var i = 0; i < Math.floor(array.length/2); ++i){ 
+    var temp = array[i]; 
+    array[i] = array[array.length - i - 1]; 
+    array[array.length - i - 1] = temp; 
+  } 
+  /*Unable to complete question 3.2. Referred to stack overflow. After reading comments and codes, this one was easiest to understand. the 'for' line takes the variables and 
+  repeats until all conditions are met. 'var temp = array[i]' is used to temporarily store the data. 'array[i] = array[array.length - i - 1];' and 'array[array.length - i - 1] = temp;'
+  take the data and reverses the order.*/
+
+  return array; //outputs numbers in reverse
+}
+
+var ar = [1, 2, 3, 4, 5];//must be in global scope because of how the function is called. 
+
+console.log(reverseArrayInPlace(ar));
