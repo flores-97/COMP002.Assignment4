@@ -43,3 +43,12 @@ console.log(sum(range(1, 10)));
 // let arrayValue = [1, 2, 3, 4, 5];
 // reverseArrayInPlace(arrayValue);
 // console.log(arrayValue); // outputs [5, 4, 3, 2, 1]
+
+function reverseArray(alphaList) {//attempted to approach question 3.1 with same mentality as previous questions. 
+    let alphaReverse = [];
+    for (let i = alphaList.length -1; i >= 0; i--) {//first attempt 'let i = 0; i < alphalist.length; i++' but then realized I had to reverse. Referred to over stack overflow.
+        alphaReverse.push(alphaList[i]);//alphalist takes my input, alphaReverse.push completes the function
+    }
+    return alphaReverse;//creates the output.
+}
+console.log(reverseArray(["A", "B", "C"]));
