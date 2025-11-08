@@ -3,6 +3,8 @@
 // Example output:
 // console.log(range(1, 10)); // outputs [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+
+
 function range(start, end) {
     let listNum =[];// will be the array to list the numbers
     for (let i = start; i <= end;i++) {//will take the 'start' to 'end' number and stay within the range
@@ -17,6 +19,16 @@ console.log(range(1, 10));
 // these numbers. Run the example program and see whether it does indeed return 55.
 // Example output:
 // console.log(sum(range(1, 10))); // returns 55
+
+function sum(numTotal) {
+    let listTotal = 0;
+    for (let i = 0; i < numTotal.length; i++) {//used the same function from question 1 to collect the list of numbers.
+        listTotal += numTotal[i];// Added the sum function in order to add all nums from list
+    }
+    return listTotal;
+}
+
+console.log(sum(range(1, 10))); 
 
 // 3. Arrays have a reverse method that changes the array by inverting the order in which
 // its elements appear. For this exercise, write two functions, reverseArray and
